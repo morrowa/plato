@@ -15,3 +15,4 @@
 /plato-*.zip
 /thirdparty/*/*
 !/thirdparty/*/*kobo*
+!/thirdparty/*/*remarkable*
