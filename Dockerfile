@@ -22,4 +22,4 @@ RUN cargo fetch --target=arm-unknown-linux-gnueabihf
 
 COPY . /root/build/
 
-RUN . /opt/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi && cargo build --release --target=arm-unknown-linux-gnueabihf
+RUN . /opt/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi && export CARGO_TARGET_ARM_UNKNOWN_LINUX_GNUEABIHF_RUSTFLAGS="-C link-arg=--sysroot=${SDKTARGETSYSROOT}" && cargo build --release --target=arm-unknown-linux-gnueabihf
